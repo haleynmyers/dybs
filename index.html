@@ -16,7 +16,7 @@
             <!--jumbotron or header-->
             <header class="sticky-shrinknav-header">
                 <h1 class="sticky-shrinknav-header-title">DYBS</h1>
-                <!--Can we design a logo for the Hero-->>
+                <!--Can we design a logo for the Hero-->
                 <ul class="menu align-center sticky-shrinknav-menu">
                     <li><a href="index.html">DYBS</a></li>
                     <li><a href="parents-page.html">For Parents</a></li>
@@ -62,10 +62,6 @@
                     <div class="row">
                         <div class="medium-6 columns">
                             <h5 class="travel-feature-card-subtitle">Book Title</h5>
-                            <div class="travel-feature-card-header-controls">
-                                <span><a href="#"><i class="fa fa-edit"></i></a></span>
-                                <span><a href="#"><i class="fa fa-remove"></i></a></span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,10 +77,10 @@
                                         alt="Book Title">
                                 </div>
                                 <div class="small-8 medium-10 columns">
-                                    <h5 class="travel-feature-card-title">Book Title</h5>
-                                    <h6 class="travel-feature-card-title">Author</h6>
+                                    <h5 class="travel-feature-card-title title">Book Title</h5>
+                                    <h6 class="travel-feature-card-title author">Author</h6>
 
-                                    <p>Plot summary. Ad usu choro interesset, ad sea dolore senserit iracundia. Qui ei
+                                    <p class="plot">Plot summary. Ad usu choro interesset, ad sea dolore senserit iracundia. Qui ei
                                         affert equidem definitiones, vix eu adolescens mediocritatem, id omnium
                                         accusamus eum.</p>
                                 </div>
@@ -115,21 +111,11 @@
     </div>
 
     <!-- Compressed Foundation JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $(function () {
-            $(window).scroll(function () {
-                var winTop = $(window).scrollTop();
-                if (winTop >= 30) {
-                    $(".wrapper").addClass("sticky-shrinknav-wrapper");
-                } else {
-                    $(".wrapper").removeClass("sticky-shrinknav-wrapper");
-                }
-            });
-        });
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+    
 
-    </script>
 </body>
 
 </html>
