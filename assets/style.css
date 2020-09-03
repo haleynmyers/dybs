@@ -1,3 +1,52 @@
-body {
-  color: black;
+section,
+nav {
+    padding:50px;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+
+.card-footer{
+    background-color: slategray;
+}
+
+.title,
+.subtitle {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+    
+}
+
+
+#homepage-subtitle {
+    font-family: cutive;
+    font-size: 20px;
+} 
+@font-face{
+    font-family: 'Lemon', cursive;
+    src: url("https://fonts.googleapis.com/css2?family=Cutive&family=Lemon&family=Walter+Turncoat&display=swap")
+
+}
+
+@font-face { 
+    src: url("https://fonts.googleapis.com/css2?family=Cutive&family=Walter+Turncoat&display=swap");
+    font-weight: bold; 
+    font-family: 'Cutive', serif;
+} 
+
+@font-face{
+    font-family: 'Walter Turncoat', HelveticaNeue-Bold; 
+    src: url("https://fonts.googleapis.com/css2?family=Cutive&family=Walter+Turncoat&display=swap");
+}
+span{
+    font-family: 'Lemon', cursive;
+
+    font-size: 36px
+}
+.hero-img{
+    align-self: center;
+    max-height: 200px;
+}
+
+.card {
+    border: double 2px darkgrey;
+    border-radius: 20px;
 }

@@ -4,21 +4,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive&family=Lemon&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
     <title>DYBS || Diversify Your BookShelf</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/62553ebf78.css">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
 
 </head>
 
 <body>
     <!-- hero -->       
         <section class="hero is-fullheight is-dark is-bold">
-            
             <div class="hero-body">
-                <div class="container">
-                    <img class="hero-img " src="assets/smaller-icon-full-title.png"
-                        alt="Diversify Your Bookshelf logo with a stack of books" />
+                <div class="level">
+                    <div class="columns is-centered">
+                        <div class="column">
+                            <img class="hero-img " src="assets/icon-with-white-letters.png"
+                                alt="Diversify Your Bookshelf logo with a stack of books" />
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -26,17 +30,20 @@
             <div class="columns is-mobile is-centered">
                 <div class="column is-two-thirds ">
                     <div class="card">
-                        <div class="card-content">
-                            <p class="title">
-                                <span class="is-centered">
-                                    We help you widen <br>
-                                    your kids' world.
+                        <div class="card-content has-text-centered">
+                            <div style="color: black">
+                                <span>
+                                    We help you widen
+                                     your kids' world. 
                                 </span>
-                            </p>
-                            <p class="subtitle is-centered">
-                                Enter a keyword below to find diverse kids' books on that topic, <br>
-                                or try these popular options!
-                            </p>
+                            </div>
+                            <div class="level"></div>
+                            <div style="color: black">
+                                <span id="homepage-subtitle">Enter a keyword below to find diverse kids' books on that topic, 
+                                or try these popular options!</span>
+                                </div>
+                                <div class="level"></div>
+
                             <!-- search input -->
                             <div class="field has-addons has-addons-centered">
                                 <div class="control">
@@ -60,8 +67,8 @@
                         <footer class="card-footer">
                             <p class="card-footer-item">
                               <span>
-                                <a role="button" class="button navbar-item is-primary is-outlined is-rounded" aria-label="menu"
-                                href="parents-page.html">For Parents
+                                <a role="button" class="button navbar-item is-black is-rounded" aria-label="menu"
+                                href="parents-page.html">Learn more!
                             </a>
                               </span>
                             </p>
@@ -71,12 +78,15 @@
             </div>
         </section>
         <section>
-            <div class="container" id="results-container">
-                
+            <div class="container">
+                <div class="columns is-mobile is-centered">
+                    <div class="column is-two-thirds " id="results-container">
+                    </div>
+                </div>  
             </div>
         </section>
     <!-- results card -->
-        <div class="card">
+        <!-- <div class="card">
             <div class="card-content">
                 <div class="columns">
                     <div class="column is-one-third">
@@ -94,11 +104,11 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
 
-    </section> -->
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </body>
 
 </html>
