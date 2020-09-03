@@ -1,63 +1,98 @@
-var bookSrch = $(".input-group-field").val().trim();
+var bookSrch = $("#mainsearch");
+var resultsGroup = $("#results-container")
 
-function gBooksMinority() {
-    var queryURL = "https://www.googleapis.com/books/v1/volumes?q=minority+authors+of+childrens+books" + bookSrch;
+function gBooksMinority(value) {
+    resultsGroup.empty();
+    var queryURL = "https://www.googleapis.com/books/v1/volumes?q=minority+authors+of+childrens+books" + value;
     $.ajax({
         url: queryURL,
         method: "GET",
-    }).then(function(response){
-
-        console.log(response);
+    }).then(function (response) {
+        fillIt(response);
     });
 }
 
-function gBooks() {
-    var queryURL = "https://www.googleapis.com/books/v1/volumes?q=childrens+books+diversity" + bookSrch;
+function gBooks(value) {
+    var queryURL = "https://www.googleapis.com/books/v1/volumes?q=childrens+books+diversity" + value;
     $.ajax({
         url: queryURL,
         method: "GET",
-    }).then(function(response){ 
-        console.log(response);
+    }).then(function (response) {
+       fillIt(response);
     });
 }
 
-$("#sharing").on("click", function(event){
+$("#sharing").on("click", function (event) {
     event.preventDefault();
-    bookSrch = "sharing";
-    gBooksMinority(bookSrch);
-    gBooks(bookSrch);
+    gBooksMinority("sharing");
+    gBooks("sharing");
 });
 
-$("#friendship").on("click", function(event){
+$("#friendship").on("click", function (event) {
     event.preventDefault();
-    bookSrch = "friendship";
-    gBooksMinority(bookSrch);
-    gBooks(bookSrch);
+    gBooksMinority("friendship");
+    gBooks("friendship");
 });
 
-$("#culture").on("click", function(event){
+$("#culture").on("click", function (event) {
     event.preventDefault();
-    bookSrch = "culture";
-    gBooksMinority(bookSrch);
-    gBooks(bookSrch);
+    gBooksMinority("culture");
+    gBooks("culture");
 });
 
-$("#history").on("click", function(event){
+$("#history").on("click", function (event) {
     event.preventDefault();
-    bookSrch = "history";
-    gBooksMinority(bookSrch);
-    gBooks(bookSrch);
+    gBooksMinority("history");
+    gBooks("history");
 });
 
-$("#kindness").on("click", function(event){
+$("#kindness").on("click", function (event) {
     event.preventDefault();
-    bookSrch = "kindness";
-    gBooksMinority(bookSrch);
-    gBooks(bookSrch);
+    gBooksMinority("kindness");
+    gBooks("kindness");
 });
 
-$(".input-group-button").on("click", function(event){
+$(".searchbtn").on("click", function (event) {
     event.preventDefault();
-    gBooksMinority(bookSrch);
-    gBooks(bookSrch);
+    gBooksMinority(bookSrch.val().trim());
+    gBooks(bookSrch.val().trim());
 });
+
+function fillIt(response) {
+
+    var items = response.items;
+
+    for (var i = 0; i < response.items.length; i++) {
+       
+        var plot = '';
+        if (items[i].searchInfo) {
+            plot = items[i].searchInfo.textSnippet;
+            console.log('INFO: ', items[i].searchInfo);
+        }
+        var author = response.items[i].volumeInfo.authors;
+        var title = response.items[i].volumeInfo.title;
+        var imgSource = response.items[i].volumeInfo.imageLinks.thumbnail;
+        var card = $("<div class='card' id='results'>");
+        var cardContent = $("<div class='card-content'>");
+        var mainGroup = $("<div class='columns'>");
+        var imgGroup = $("<div class='column is-one-third'>");
+        var thumbNail = $("<img class='is-square' src='" + imgSource + "' alt='" + title + "'/>");
+        var infoGroup = $("<div class='column is-two-thirds'>");
+        var titleGroup = $("<h5 class='title'>");
+        var authorGroup = $("<h6 class='author subtitle'>");
+        var plotGroup = $("<p class='plot'>");
+
+        $(resultsGroup).append(card);
+        $(card).append(cardContent);
+        $(cardContent).append(mainGroup);
+        $(mainGroup).append(imgGroup);
+        $(imgGroup).append(thumbNail);
+        $(mainGroup).append(infoGroup);
+        $(infoGroup).append(titleGroup);
+        $(titleGroup).text(title);
+        $(infoGroup).append(authorGroup);
+        $(authorGroup).text(author);
+        $(infoGroup).append(plotGroup);
+        $(plotGroup).html(plot);
+    }
+}

@@ -36,22 +36,31 @@
                     Enter a keyword in the searchbar to find diverse kids' books on a certain topic, or try these popular options!
                 </p>
                 <!-- search input -->
-                <div class="field">
-                    <div class="control">
-                      <input class="input is-primary" type="text" placeholder="Primary input">
+                <div class="field has-addons">
+                    <div class="control has-icons-right">
+                        <input class="input is-rounded is-primary" id="mainsearch" type="text" placeholder="Search">
                     </div>
-                  </div>
-                  <button class="button is-info is-rounded">Sharing</button>
-                  <button class="button is-info is-rounded">Friendship</button>
-                  <button class="button is-info is-rounded">Culture</button>
-                  <button class="button is-info is-rounded">History</button>
+                    <div class="control">
+                            <a class="button savebtn is-rounded is-primary searchbtn">
+                              Search
+                            </a>
+                        </div>  
+                    </div>
+                </div>
+                  <button class="button is-info is-rounded" id="sharing">Sharing</button>
+                  <button class="button is-info is-rounded" id="friendship">Friendship</button>
+                  <button class="button is-info is-rounded" id="culture">Culture</button>
+                  <button class="button is-info is-rounded" id="history">History</button>
                   <button class="button is-info is-rounded">Kindness</button>
             </div>
 
         </div>
     </div>
+    <div class="container" id="results-container">
+
+    </div>
         <!-- results card -->
-        <div class="card">
+        <div class="card" id="results">
             <div class="card-content">
                 <div class="columns">
                     <div class="column is-one-third">
@@ -60,7 +69,11 @@
                     <div class="column is-two-thirds">
                         <h5 class="title"></h5>
                         <h6 class="author"></h6>
-                        <p class="plot">
+                        <p class="plot"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
