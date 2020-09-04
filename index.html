@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Cutive&family=Lemon&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive&family=Lemon&family=Walter+Turncoat&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <title>DYBS || Diversify Your BookShelf</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
@@ -15,97 +16,103 @@
 </head>
 
 <body>
-    <!-- hero -->       
-        <section class="hero is-fullheight is-dark is-bold">
-           
-            <div class="hero-body">
-                <div class="level">
-                    <div class="columns is-centered">
-                        <div class="column">
-                            <img class="hero-img " src="assets/icon-with-white-letters.png"
-                                alt="Diversify Your Bookshelf logo with a stack of books" />
-                        </div>
-                    </div>
-                </div>
+    <!-- hero -->
+    <section class="hero is-fullheight is-dark is-bold">
+
+        <div class="hero-body">
+            <img class="hero-img is-centered" src="assets/icon-with-white-letters.png"
+                alt="Diversify Your Bookshelf logo with a stack of books" />
+        </div>
+        <div class="navbar-menu is-transparent is-active">
+            <div class="navbar-start">
+                <button class="button is-primary is-rounded" id="user-bookshelf">View My BookShelf</button>
             </div>
-                    <div class="navbar-menu is-transparent is-active">
-                        <div class="navbar-start">
-                            <button class="button is-primary is-rounded" id="user-bookshelf">View My BookShelf</button>
-                        </div> 
-            
-                        <div class="navbar-end">
-                            <button class="button is-info is-rounded" ><a href="parents-page.html">Learn More</a></button>
 
-                            <!-- <a class="navbar-item button is-primary is-rounded" href="parents-page.html" >Learn More -->
-                            </a>
+            <div class="navbar-end">
+                <button class="button is-info is-rounded"><a href="parents-page.html">Learn More</a></button>
+                </a>
+            </div>
+        </div>
+
+        <!--landing page card-->
+        <div class="columns is-mobile is-centered">
+            <div class="column is-two-thirds ">
+                <div class="card">
+                    <div class="card-content has-text-centered">
+                        <div style="color: black">
+                            <span>
+                                We help you widen
+                                your kids' world.
+                            </span>
                         </div>
-                    </div>
-
-            <!--landing page card-->
-            <div class="columns is-mobile is-centered">
-                <div class="column is-two-thirds ">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <div style="color: black">
-                                <span>
-                                    We help you widen
-                                     your kids' world. 
-                                </span>
-                            </div>
-                            <div class="level"></div>
-                            <div style="color: black">
-                                <span id="homepage-subtitle">Enter a keyword below to find diverse kids' books on that topic, 
+                        <div class="level"></div>
+                        <div style="color: black">
+                            <span id="homepage-subtitle">Enter a keyword below to find diverse kids' books on that
+                                topic,
                                 or try these popular options!</span>
-                                </div>
-                                <div class="level"></div>
+                        </div>
+                        <div class="level"></div>
 
-                            <!-- search input -->
-                            <div class="field has-addons has-addons-centered">
-                                <div class="control">
-                                    <input class="input is-rounded is-primary" id="mainsearch" type="text" placeholder="Search Terms">
-                                </div>
-                                <div class="control">
-                                    <a class="button savebtn is-rounded is-primary searchbtn">
-                                        GO
-                                    </a>
-                                </div>
+                        <!-- search input -->
+                        <div class="field has-addons has-addons-centered">
+                            <div class="control">
+                                <input class="input is-rounded is-primary" id="mainsearch" type="text"
+                                    placeholder="Search Terms">
+                            </div>
+                            <div class="control">
+                                <a class="button savebtn is-rounded is-primary searchbtn">
+                                    GO
+                                </a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="buttons is-centered ">
-                            <button class="button is-info is-rounded" id="sharing">Sharing</button>
-                            <button class="button is-info is-rounded" id="friendship">Friendship</button>
-                            <button class="button is-info is-rounded" id="culture">Culture</button>
-                            <button class="button is-info is-rounded" id="history">History</button>
-                            <button class="button is-info is-rounded" id="kindess">Kindness</button>
-                        </div>
+
+                    <div class="buttons is-centered ">
+                        <button class="button is-info is-rounded" id="sharing">Sharing</button>
+                        <button class="button is-info is-rounded" id="friendship">Friendship</button>
+                        <button class="button is-info is-rounded" id="culture">Culture</button>
+                        <button class="button is-info is-rounded" id="history">History</button>
+                        <button class="button is-info is-rounded" id="kindess">Kindness</button>
+
                     </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="columns is-mobile is-centered">
-                    <div class="column is-two-thirds " id="results-container">
-                    </div>
-                </div>  
-            </div>
-        </section>
- 
-        <div class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-              <header class="modal-card-head">
-                <p class="modal-card-title">My<span><img src="assets/icon-with-verticals.png" style="height:50px; width:50px"></span> BookShelf</p>
-                <button class="delete modal-close" aria-label="close">x</button>
-              </header>
-              <section class="modal-card-body">
-                <div class="container" id="userShelfModal">
-        
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="columns is-mobile is-centered">
+                <div class="column is-two-thirds " id="results-container">
                 </div>
-              </section>
             </div>
-          </div>
+
+        </div>
+    </section>
+
+    <div class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title"><span><img src="assets/icon-with-verticals.png"
+                            style="height:50px; width:50px"></span> My BookShelf</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="container">
+                    <p>
+                        <div class="has-text-centered">
+                        <ul id="userShelfModal">
+
+                        </ul>
+                    </div>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
