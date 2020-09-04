@@ -46,7 +46,10 @@ span{
     font-family: 'Lemon', cursive;
     font-size: 36px
 }
-.hero-img{
+
+ .hero-img{
+    display: block;
+    margin: auto;
     align-self: center;
     max-height: 200px;
 }
