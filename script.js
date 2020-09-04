@@ -78,9 +78,10 @@ function fillIt(response) {
         var imgGroup = $("<div class='column is-one-third'>");
         var thumbNail = $("<img class='is-square' src='" + imgSource + "' alt='" + title + "'/>");
         var infoGroup = $("<div class='column is-two-thirds'>");
-        var titleGroup = $("<h5 class='title'>");
-        var authorGroup = $("<h6 class='author subtitle'>");
+        var titleGroup = $("<h6 class='title'>");
+        var authorGroup = $("<p class='author subtitle'>");
         var plotGroup = $("<p class='plot'>");
+        // var shelfBtn = $("<button class='button is-primary is-rounded'>+ DYBS</button>")
 
         $(resultsGroup).append(card);
         $(card).append(cardContent);
@@ -94,5 +95,7 @@ function fillIt(response) {
         $(authorGroup).text(author);
         $(infoGroup).append(plotGroup);
         $(plotGroup).html(plot);
+        // $(imgGroup).append(shelfBtn);
+
     }
 }

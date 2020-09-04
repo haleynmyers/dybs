@@ -9,6 +9,7 @@
     <title>DYBS || Diversify Your BookShelf</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/62553ebf78.css">
+    <script src="https://use.fontawesome.com/62553ebf78.js"></script>
 
 
 </head>
@@ -16,6 +17,7 @@
 <body>
     <!-- hero -->       
         <section class="hero is-fullheight is-dark is-bold">
+           
             <div class="hero-body">
                 <div class="level">
                     <div class="columns is-centered">
@@ -26,6 +28,18 @@
                     </div>
                 </div>
             </div>
+                    <div class="navbar-menu is-transparent is-active">
+                        <div class="navbar-start">
+                            <button class="button is-primary is-rounded" id="user-book-shelf">View My BookShelf</button>
+                        </div> 
+            
+                        <div class="navbar-end">
+                            <button class="button is-info is-rounded" ><a href="parents-page.html">Learn More</a></button>
+
+                            <!-- <a class="navbar-item button is-primary is-rounded" href="parents-page.html" >Learn More -->
+                            </a>
+                        </div>
+                    </div>
 
             <!--landing page card-->
             <div class="columns is-mobile is-centered">
@@ -65,7 +79,7 @@
                             <button class="button is-info is-rounded" id="history">History</button>
                             <button class="button is-info is-rounded" id="kindess">Kindness</button>
                         </div>
-                        <footer class="card-footer">
+                        <!-- <footer class="card-footer">
                             <p class="card-footer-item">
                               <span>
                                 <a role="button" class="button navbar-item is-black is-rounded" aria-label="menu"
@@ -73,7 +87,7 @@
                             </a>
                               </span>
                             </p>
-                          </footer>
+                          </footer> -->
                     </div>
                 </div>
             </div>
@@ -86,29 +100,73 @@
                 </div>  
             </div>
         </section>
-    <!-- results card -->
-        <!-- <div class="card">
-            <div class="card-content">
-                <div class="columns">
-                    <div class="column is-one-third">
-                        <img class="is-square" />
-                    </div>
-                    <div class="column is-two-thirds">
-                        <h5 class="title"></h5>
-                        <h6 class="author"></h6>
-                        <p class="plot"></p>
-                    </div>
+ 
+        <div class="modal is-active">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">My<span><img src="assets/icon-with-verticals.png" style="height:50px; width:50px"></span> BookShelf</p>
+                <button class="delete" aria-label="close"></button>
+              </header>
+              <section class="modal-card-body">
+                <div class="container" id="userShelfModal">
+        
                 </div>
+              </section>
+              <!-- <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+              </footer> -->
             </div>
-        </div>
-
-                        </p>
-                    </div>
-                </div>
-            </div> -->
-        <!-- </div> -->
+          </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
 </body>
 
 </html>
+
+  <script type="text/javascript">
+
+var userBookShelf = [];
+
+function storeBooks() {
+    localStorage.setItem("userBookShelf", JSON.stringify(userBookShelf));
+}
+
+function checkForBooks() {
+    var storedBooks = JSON.parse(localStorage.getItem("userBookShelf"));
+    if (storedBooks) {
+        userBookShelf = storedBooks;
+      }
+      printToBookShelf();
+}
+
+function printToBookShelf(){
+  for (var i = 0; i < userBookShelf.length; i++){
+      var bookList = userBookShelf[i].title;
+      var authorList = userBookShelf[i].author;
+    //   $().val();
+  }
+}
+
+// function addToShelf(){
+    $('.saveBtn').on("click", function(event) {
+  event.preventDefault();
+
+  var $input = $(this).prev();
+
+    var userBookShelf = {
+        storedTitle: $('.title').val(),
+        storedAuthor: $('.author').val()
+    };
+
+    schedule.push(userBookShelf);
+    storeBooks();
+    printToBookShelf();
+  }
+);
+}
+var resultsClick = document.getElementsById("results");
+var storedTitle = $('.title');
+var storedAuthor = $(".author");
+</script>
