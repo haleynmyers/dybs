@@ -81,7 +81,9 @@ function fillIt(response) {
         var titleGroup = $("<h6 class='title'>");
         var authorGroup = $("<p class='author subtitle'>");
         var plotGroup = $("<p class='plot'>");
-        // var shelfBtn = $("<button class='button is-primary is-rounded'>+ DYBS</button>")
+        var shelfBtn = $("<button class='button is-primary is-rounded saveToShelf'>+ DYBS</button>")
+        shelfBtn.attr("data-title",title);
+        shelfBtn.attr("data-author",author);
 
         $(resultsGroup).append(card);
         $(card).append(cardContent);
@@ -95,7 +97,55 @@ function fillIt(response) {
         $(authorGroup).text(author);
         $(infoGroup).append(plotGroup);
         $(plotGroup).html(plot);
-        // $(imgGroup).append(shelfBtn);
+        $(imgGroup).append(shelfBtn);
 
     }
 }
+
+
+
+
+
+
+
+
+var userBookShelf = [];
+
+function storeBooks() {
+    localStorage.setItem("userBookShelf", JSON.stringify(userBookShelf));
+}
+
+
+resultsGroup.on("click", ".saveToShelf", function(){
+    var book = {
+        title: $(this).attr("data-title"),
+        author: $(this).attr("data-author")
+    }
+    userBookShelf.push(book);
+    storeBooks();
+});
+
+function checkForBooks() {
+    var storedBooks = JSON.parse(localStorage.getItem("userBookShelf"));
+    if (storedBooks) {
+        userBookShelf = storedBooks;
+      }
+}
+
+function printToMyShelf(userBookShelf) {
+    for (var i = 0; i < userBookShelf.length; i++){
+        $("#userShelfModal").append("<ul><i class='fa fa-bookmark'><i>" + "  Title: " + userBookShelf[i].title + "<br />" + " Author(s): " + userBookShelf[i].author + "</ul>" + "<hr>");
+    }
+}
+
+var modal = $('.modal');
+$('#user-bookshelf').on("click", function(){
+   modal.addClass('is-active');
+   checkForBooks();
+   printToMyShelf(userBookShelf);
+});
+$('.modal-close').on("click", function(){
+    modal.removeClass('is-active');
+});
+
+checkForBooks();
