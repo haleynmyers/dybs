@@ -14,6 +14,12 @@ nav {
     font-family: Verdana, Geneva, Tahoma, sans-serif
     
 }
+a {
+    color: white;
+}
+a:visited {
+    color: white;
+}
 
 
 #homepage-subtitle {
@@ -38,7 +44,6 @@ nav {
 }
 span{
     font-family: 'Lemon', cursive;
-
     font-size: 36px
 }
 .hero-img{
@@ -49,4 +54,6 @@ span{
 .card {
     border: double 2px darkgrey;
     border-radius: 20px;
+    margin: 15px;
+    padding-bottom: 15px;
 }
