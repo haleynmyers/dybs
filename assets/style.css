@@ -22,7 +22,8 @@ a:visited {
 }
 
 
-#homepage-subtitle {
+.homepage-subtitle,
+ul {
     font-family: cutive;
     font-size: 20px;
 } 
@@ -59,4 +60,7 @@ span{
     border-radius: 20px;
     margin: 15px;
     padding-bottom: 15px;
+}
+.card-header {
+    padding: 10px;
 }
