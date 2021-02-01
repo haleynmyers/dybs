@@ -1,59 +1,47 @@
-**DIVERSIFY YOUR BOOKSHELF**
 ![](./assets/half-size-logo.png)
-===============================================
+# DIVERSIFY YOUR BOOKSHELF
+> DYBS! (Pronounced "dibs") We help you widen your kids' world.
 
-## WE HELP YOU WIDEN YOUR KIDS WORLD.
-We help you widen your kids world.
-<br>
-
+## Deployed Website
+[DYBS.com](https://haleynmyers.github.io/dybs/)
 
 ## Description
 
-DYBS - Diversify Your Bookshelf is an educaitonal resource application for children of reading age, that identifies books written by authors form marginalized communities and other minortiy groups. Similiar to that of other commercial level search engines, the applications core functionality is done through a keyword query, or 5 cateogorical buttons located directly under the search element. Designed as a mobile first application the user interface is simplistic with cross platform funtionality to include mobile, tablet and desktop. The applicataion is operable by adults or children with basic computer skills.  
+DYBS - Diversify Your Bookshelf is an educaitonal resource that identifies books written by authors from marginalized communities and other minortiy groups or prominently feature diversity in the book.  You may search a keyword in the searchbar or choose from 5 cateogorical buttons located directly under the search element. Designed as a mobile first application, the user interface is simplistic with cross platform funtionality to include mobile, tablet and desktop. The applicataion is operable by adults or children with basic computer skills.  
 
-The learn more button provides navagation to separate page that informs parents with an explaintion of the sources used to deliver the search results. 
+The user may also save their choices to their "bookshelf" so that they can view a modal that contains the list of books they are interested in.
 
+The "Learn More" button provides navagation to a separate page that informs parents with an explanation of the sources used to deliver the search results. 
 
-<br>
+## Table of Contents
+* [Deployed Website](#deployed-website)
+* [Description](#description)
+* [Installation](#installation)
+* [License](#license)
+* [Technology Used](#technology-used)
+* [Authors](#authors)
 
+## Installation
+If you wish to clone the code locally, you will need clone the code and run
+`npm install` to install the dependecies listed in the package.json. 
 
+## License
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## Technology
-
-## Framework
-![](https://lh3.googleusercontent.com/proxy/z3IX4hrwlocHgzYQIVOYeS6qh8ISxAWON1J_3Ab1m-oRA-Tnsm0dVi2-yKsaqpB28jtvJwbRVnbHPNSG0d499fXyusppIz3KOq7Bn8e8ydAj9HLGrspYlHjzpffF)
-## [Bulma.io](https://bulma.io/)
-#### A opensource, modern, modualar and repsonsive CSS framework based on Flexbox.
-<br>
-
-## Application Programs
-- [Google Books API](https://developers.google.com/books)
-- Future API
-
-
-## Components
-- HTML 
-- Javascript
+ ## Technology Used
+- [Bulma.io](https://bulma.io/) - An opensource, modern, modular and repsonsive CSS framework based on Flexbox.
+- [Google Books API](https://developers.google.com/books) 
+- HTML/CSS 
+- JavaScript
 - [JQuery](https://jquery.com/)
 - [Google Sheets](https://www.google.com/slides/about/)
 - [Google Fonts](https://fonts.google.com/)
 - [Moment.js](https://momentjs.com/docs/)
 - [Flaticon](https://www.flaticon.com/)
-<br>
 
 
+## Authors
+ [Haley Myers](https://github.com/haleynmyers)
+ [Brendon Conatser](https://github.com/Brendon-Ravn)
+ [Payton Banks](https://github.com/klvvr)
 
-
-## Development Team
-<br>
-Gitub Profiles:
-
-#### [Haley Myers](https://github.com/haleynmyers)
-#### [Brendon Conatser](https://github.com/Brendon-Ravn)
-#### [Carol Christiansen](https://github.com/cechris85)
-#### [Payton Banks](https://github.com/klvvr)
-<br>
-
-
-## Project Website
-## [DYBS.com](https://haleynmyers.github.io/dybs/)
